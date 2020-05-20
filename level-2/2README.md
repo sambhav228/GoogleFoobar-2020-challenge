@@ -44,3 +44,11 @@ Input:
 Solution.solution(">----<")
 Output:
     2
+    
+### Understanding
+
+This is quite a simple challenge and can be done in several ways. Basically choose whether to start on the left of the string or the right of the string.
+
+If starting on the left for every > you come across look to all the characters to the right of it, and every < you find to the right increment salutesExchanged (which would be a simple counter). Repeat this process until you react the end of the string.
+
+Starting on the right is just the opposite, for every < you come across look to all characters to the left and for every > increment the counter. Repeat till you come to the end.
