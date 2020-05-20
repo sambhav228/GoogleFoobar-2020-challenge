@@ -1,5 +1,5 @@
 # Google Foobar Challenge
 
-###### It is a secret hiring challenge from Google which you get when you match some search behaviour on Google search or their documentations. You are given a prompt and if you accept, you are moved to an online shell where you can request questions and solve them
+Foobar is a web-app that posts a series of challenges which you have a set time to complete which you will be invited to participate in. These challenges can be completed in either Python or Java, most of the challenges require fair understanding of popular algorithms which are most likely used at Google. Upon completing level 3 you will be prompted with the option to send your details to recruitment which may lead up to a follow up email or phone call depending on how you tackled the challenges.
 
 ![screenshot_1](https://github.com/sambhav228/GoogleFoobar-2020-challenge/blob/master/cmptd.jpg)
