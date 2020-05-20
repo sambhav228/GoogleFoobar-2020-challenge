@@ -47,3 +47,15 @@ Input:
 solution.solution('2', '1')
 Output:
     1
+    
+### Understanding
+I guess the best way to describe the problem is to imagine yourself starting with two numbers F and M, both of which have the value of 1. At the start you are currently in step 0, to progress a step you must either;
+
+        Add the value of F onto M to calculate a new M, or,
+        Add the value of M onto F to calculate a new F.
+        
+  Because of the rules of the specification we can create some facts:
+  
+        Because of the steps, F can never equal M if step n > 0.
+        If F > M we know that the last step to take place involved adding M to F.
+        If M > F we know that the last step to take place involved adding F to M.
