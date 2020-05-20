@@ -61,3 +61,22 @@ Input:
 solution.solution([[0, 1, 0, 0, 0, 1], [4, 0, 0, 3, 2, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]])
 Output:
     [0, 3, 2, 9, 14]
+    
+### Understanding
+
+This challenge may take a couple of reads to understand what is actually going on and what is asked of us. Simply put the aim of your program is to output the chances of ending up in a terminal state from starting at state s0. Adding up the numbers in a given int[] provides us with a denominator which we can then start to create the probability of which state the 'ore' will change into next.
+
+This is what is happening in a visual diagram using the example used in the specification:
+
+![screenshot_1](https://github.com/sambhav228/GoogleFoobar-2020-challenge/blob/master/level-3/doomsday_dia.png)
+
+From this diagram we can see that;
+
+s0 has a 50% chance to go to s5 which is a terminal state, and a 50% chance to go to s1 which is a non-terminal state.
+s1 has a 44.44% chance to return back to s0, a 22.22% chance to go to s4 which is a terminal state, and then a 33.33% chance to go to s3 which is another terminal state.
+s2, s3, s4 and s5 are terminal states, states which cannot travel to any other node. You can imagine that they have a 100% chance of remaining in the same state after an evolution.
+So starting from s0 what are the probabilities that we will end up the terminal states? It is a bit tricky to say because of the loop with 's0' and 's1' meaning that the 50% chance s0 -> s1 will be effected by this and so will the probabilities of s1 -> terminal states.
+
+What would be ideal would be just have to chances of reaching terminal nodes and removing all loops.
+
+Well there is a way, and the way I used was a Markov Absorbing Chain method which is a Markov chain in which every state will eventually reach an absorbing state.
